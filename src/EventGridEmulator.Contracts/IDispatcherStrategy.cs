@@ -2,8 +2,8 @@
 
 namespace EventGridEmulator.Contracts
 {
-    public interface IDispatcherStrategy
-    {
-        Task DispatchEventAsync(string endpointUrl, EventGridEvent ev);
-    }
+	public interface IDispatcherStrategy
+	{
+		Task DispatchEventAsync(string endpointUrl, EventGridEvent ev);
+	}
 }

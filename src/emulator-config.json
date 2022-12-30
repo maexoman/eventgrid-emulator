@@ -1,0 +1,24 @@
+﻿{
+	"Port": 5000,
+	"Topics": [
+		{
+			"Name": "WeatherEvents",
+			"Subscriptions": [
+				{
+					"Name": "MyAzureFunc1",
+					"EventTypes": [ "Rain", "Sunny" ],
+					"SubjectBeginsWith": "",
+					"SubjectEndsWith": "",
+					"EndpointUrl": "http://localhost:7071/admin/extensions/EventGridExtensionConfig?functionName=<MyFuncName>",
+					"DispatchStrategy": "DefaultHttpStrategy"
+				}
+			]
+		}
+	],
+	"DispatchStrategies": [
+		{
+			"Name": "DefaultHttpStrategy",
+			"Type": "EventGridEmulator.Logic.DispatchStrategies.DefaultHttpStrategy"
+		}
+	]
+}
